@@ -1,4 +1,4 @@
-//소수 만들기 - Summer/Winter Coding(~2018)
+//Lv 1. 소수 만들기 - Summer/Winter Coding(~2018)
 function findPrime(num) {
   for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) return false;
