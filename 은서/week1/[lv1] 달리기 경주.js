@@ -1,20 +1,20 @@
 function solution(players, callings) {
-  const playerMap = {};
+  let idx_object = {};
 
   for (let i = 0; i < players.length; i++) {
-    playerMap[players[i]] = i;
+    idx_object[players[i]] = i;
   }
 
-  for (let i = 0; i < callings.length; i++) {
-    const idx = playerMap[callings[i]];
-    const temp = players[idx - 1];
+  callings.forEach((value) => {
+    let current_idx = idx_object[value];
 
-    players[idx - 1] = callings[i];
-    players[idx] = temp;
+    let front_player = players[current_idx - 1];
+    players[current_idx - 1] = players[current_idx];
+    players[current_idx] = front_player;
 
-    playerMap[callings[i]] = idx - 1;
-    playerMap[temp] = idx;
-  }
+    idx_object[value]--;
+    idx_object[players[current_idx]]++;
+  });
 
   return players;
 }
