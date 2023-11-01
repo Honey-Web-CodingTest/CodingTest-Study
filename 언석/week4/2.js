@@ -1,3 +1,6 @@
+// https://school.programmers.co.kr/learn/courses/30/lessons/42748
+// K번째수
+
 const solution = function foundNumber(array, commands) {
   const ANS_ARR = [];
 
@@ -12,7 +15,6 @@ const solution = function foundNumber(array, commands) {
 }
 
 console.log(solution([1, 1, 1, 6, 1, 1, 1], [[2, 5, 3], [4, 4, 1], [1, 7, 3]]	));
-
 
 /**
  * slice()
