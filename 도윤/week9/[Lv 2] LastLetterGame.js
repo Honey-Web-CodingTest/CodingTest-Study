@@ -1,4 +1,4 @@
-// Lv 1. 영어 끝말잇기 - Summer/Winter Coding(~2018)
+// Lv 2. 영어 끝말잇기 - Summer/Winter Coding(~2018)
 function solution(n, words) {
   const password = [words[0]];
   let len = words[0].length;
